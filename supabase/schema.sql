@@ -157,18 +157,31 @@ create trigger set_updated_at_orders
 -- ============================================================
 -- Trigger — auto-create profile on signup
 -- ============================================================
-create or replace function handle_new_user()
-returns trigger language plpgsql security definer as $$
+create or replace function public.handle_new_user()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
 begin
   insert into public.profiles (user_id, full_name, role)
   values (
     new.id,
     new.raw_user_meta_data ->> 'full_name',
     coalesce(
-      (new.raw_user_meta_data ->> 'role')::user_role,
-      'restaurant_owner'
+      (new.raw_user_meta_data ->> 'role')::public.user_role,
+      'restaurant_owner'::public.user_role
     )
   );
+  return new;
+exception when others then
+  insert into public.profiles (user_id, full_name, role)
+  values (
+    new.id,
+    new.raw_user_meta_data ->> 'full_name',
+    'restaurant_owner'::public.user_role
+  )
+  on conflict (user_id) do nothing;
   return new;
 end;
 $$;
