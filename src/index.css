@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dynamic theme variables injected per restaurant */
+:root {
+  --color-primary: #e85d04;
+  --color-primary-light: #fb8500;
+  --color-primary-dark: #c44b02;
+}
+
+/* RTL support */
+[dir='rtl'] {
+  font-family: 'Cairo', sans-serif;
+}
+
+[dir='ltr'] {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--color-primary)] text-white font-medium px-4 py-2 rounded-lg
+           hover:bg-[var(--color-primary-dark)] active:scale-95 transition-all duration-150;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100;
+  }
+}

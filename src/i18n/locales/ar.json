@@ -1,0 +1,58 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "search": "بحث",
+    "back": "رجوع",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "register": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "fullName": "الاسم الكامل",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "noAccount": "ليس لديك حساب؟",
+    "hasAccount": "لديك حساب بالفعل؟"
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "categories": "الفئات",
+    "products": "المنتجات",
+    "orders": "الطلبات",
+    "branches": "الفروع",
+    "settings": "الإعدادات",
+    "restaurants": "المطاعم",
+    "users": "المستخدمون"
+  },
+  "restaurant": {
+    "name": "اسم المطعم",
+    "status": {
+      "active": "نشط",
+      "suspended": "موقوف",
+      "pending": "قيد الانتظار"
+    }
+  },
+  "customer": {
+    "menu": "القائمة",
+    "cart": "السلة",
+    "checkout": "إتمام الطلب",
+    "addToCart": "أضف إلى السلة",
+    "removeFromCart": "إزالة",
+    "total": "المجموع",
+    "placeOrder": "تأكيد الطلب",
+    "customerName": "اسمك",
+    "customerPhone": "رقم هاتفك",
+    "notes": "ملاحظات (اختياري)",
+    "orderPlaced": "تم تقديم الطلب بنجاح!",
+    "emptyCart": "سلتك فارغة"
+  }
+}
